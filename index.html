@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="bg-shapes">
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+
+      <div class="card-header">
+        <div class="logo">✦</div>
+        <h1>Create Account</h1>
+        <p>Join us — fill in your details below</p>
+      </div>
+
+      <form id="registerForm" novalidate>
+
+        <!-- Full Name -->
+        <div class="field-group">
+          <label for="name">Full Name</label>
+          <div class="input-wrap">
+            <span class="icon">👤</span>
+            <input type="text" id="name" placeholder="FULL NAME" />
+          </div>
+          <span class="error" id="nameErr"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="field-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrap">
+            <span class="icon">✉️</span>
+            <input type="email" id="email" placeholder="abc@example.com" />
+          </div>
+          <span class="error" id="emailErr"></span>
+        </div>
+
+        <!-- Phone -->
+        <div class="field-group">
+          <label for="phone">Phone Number</label>
+          <div class="input-wrap">
+            <span class="icon">📞</span>
+            <input type="tel" id="phone" placeholder="+1 234 567 8900" />
+          </div>
+          <span class="error" id="phoneErr"></span>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="field-group">
+          <label for="dob">Date of Birth</label>
+          <div class="input-wrap">
+            <span class="icon">🎂</span>
+            <input type="date" id="dob" />
+          </div>
+          <span class="error" id="dobErr"></span>
+        </div>
+
+        <!-- Password -->
+        <div class="field-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span class="icon">🔒</span>
+            <input type="password" id="password" placeholder="Create a strong password" />
+            <button type="button" class="toggle-pw" onclick="togglePw('password', this)">👁</button>
+          </div>
+          <div class="strength-bar">
+            <div class="strength-fill" id="strengthFill"></div>
+          </div>
+          <span class="strength-label" id="strengthLabel"></span>
+          <span class="error" id="passwordErr"></span>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="field-group">
+          <label for="confirm">Confirm Password</label>
+          <div class="input-wrap">
+            <span class="icon">🔑</span>
+            <input type="password" id="confirm" placeholder="Repeat your password" />
+            <button type="button" class="toggle-pw" onclick="togglePw('confirm', this)">👁</button>
+          </div>
+          <span class="error" id="confirmErr"></span>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Account →</button>
+
+      </form>
+
+      <div class="success-msg" id="successMsg">
+        <div class="success-icon">🎉</div>
+        <h2>Form Submitted!</h2>
+        <p>Your account has been successfully created. Welcome aboard!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
